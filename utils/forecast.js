@@ -12,7 +12,7 @@ exports.forecast = async (longitude, latitude, callback) => {
     });
     callback(
       null,
-      `${data.current.condition.text}. It is currently ${data.current.temp_c} °C out. There is ${data.current.precip_mm} mm precipitation.`
+      `${data.current.condition.text}. It is currently ${data.current.temp_c} °C out. There is ${data.current.precip_mm} mm precipitation. Wind speed is ${data.current.wind_kph} km/h in ${data.current.wind_dir} direction.`
     );
   } catch (error) {
     if (!error.response)
